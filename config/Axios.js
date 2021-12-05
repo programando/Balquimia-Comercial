@@ -11,7 +11,7 @@ Api.defaults.withCredentials = true;
 //Api.defaults.headers.post['Authorization'] = 'Bearer ' + token
 /*
    baseUrl      : process.env.URL_BASE,
-   apiUrl       : process.env.URL_API,
+   apiUrl    : process.env.URL_API,
    webUrl       : process.env.URL_WEB,
    resetPassword: process.env.URL_RESET_PASS
    */
