@@ -6,16 +6,13 @@ let Api = axios.create({
 });
  
 Api.defaults.withCredentials = true;
-
+Api.defaults.baseURL = process.env.URL_API;
 
 
 //Api.defaults.headers.post['Accept'] = 'application/json'; // for POST requests
 //Api.defaults.headers.post['Authorization'] = 'Bearer ' + token
 /*
-   baseUrl      : process.env.URL_BASE,
-   apiUrl    : process.env.URL_API,
-   webUrl       : process.env.URL_WEB,
-   resetPassword: process.env.URL_RESET_PASS
+  
    */
 
 export default Api;

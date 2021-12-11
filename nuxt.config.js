@@ -1,5 +1,3 @@
-import dotenv from "dotenv"; dotenv.config();
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -19,12 +17,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&display=swap' },
     ],
-  env: {
-      URL_BASE      : process.env.URL_BASE,
-      URL_API       : process.env.URL_API,
-      URL_WEB       : process.env.URL_WEB,
-      URL_RESET_PASS: process.env.URL_RESET_PASS,
-    },    
+    
   },
  
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -33,6 +26,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -42,6 +36,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/dotenv',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -52,7 +47,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: process.env.URL_API,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -69,7 +66,13 @@ export default {
         logout: { url:'/logout', method: 'post'}
       }
     },
-  }
+   },
+   redirect: {
+     login: '/',
+     logout: '/',
+     home: '/dashboard',
+     callback:'/'
+   }
 }
   
 }
