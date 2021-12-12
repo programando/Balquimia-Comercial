@@ -7,7 +7,7 @@
         
         <div class="flex flex-grow lg:flex-grow-0">
           <div class="">
-          <nuxt-link to="">
+          <nuxt-link to="/dashboard">
             <img
               class="h-16 md:h-20 logo lg:ml-10 lg:h-auto"
               src="/images/comunes/balquimia-logo.png"
@@ -18,23 +18,10 @@
         </div>
 
         <div class="flex items-center justify-center mt-6 mr-6">
-          <div class="mx-1 cursor-pointer md:mx-2">
-            <img
-              class="h-4 md:h-5"
-              src="/images/comunes/notification-repo.svg"
-              alt=""
-            />
-          </div>
-          <div class="mx-1 cursor-pointer md:mx-2">
-            <img
-              class="h-4 md:h-5"
-              src="/images/comunes/email-repo.svg"
-              alt=""
-            />
-          </div>
-
-          <!-- user menu -->
-            <UserAccount></UserAccount>
+    
+            <h2 Class="text-lg cursor:pointer" @click="$auth.logout()"> Cerrar sistema</h2>
+          
+            
 
         </div>
       </div>
@@ -61,7 +48,7 @@
 </template>
 
 <script>
-  import UserAccount from "@/components/library/userAccount";
+  
 export default {
   name: "layoutComputron",
     
@@ -70,7 +57,7 @@ export default {
         
       };
     },
-    components: { UserAccount},
+    
     
    created()   {
     

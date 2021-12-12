@@ -12,8 +12,11 @@ module.exports = {
     extend: {
      fontFamily: {
         monserrat: 'Montserrat',
-       open: 'Open+Sans+Condensed',
-      }
+        open     : 'Open+Sans+Condensed',
+      },
+      colors: {
+        primary: '#FE9569',
+      },
       
     },
   },
