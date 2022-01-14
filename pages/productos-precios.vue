@@ -7,6 +7,7 @@
         type="text"
         v-model="busqueda"
         placeholder="Buscar"
+        
       />
     </div>
     <div class="mx-10 h-1/2 ">
@@ -33,7 +34,7 @@
         
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
 		<tbody class="flex flex-col items-center justify-between w-full overflow-y-scroll bg-grey-light" style="height: 50vh;">
-          <tr v-for="producto in buscarProductos"   :key="producto.id_prdcto"
+          <tr v-for="producto in items"   :key="producto.id_prdcto"
                       class="flex w-full text-sm bg-white cursor-pointer tr" >
                       <td class="w-5/12 px-2 py-1 text-left border-t border-b border-l border-gray-400" >
                         {{ producto.nom_prdcto | Capitalize }}
@@ -74,26 +75,20 @@ export default {
    mounted() {
       Productos.listaPrecios()
           .then ( response => {
-             this.productos =response.data ;
+             this.productos     =response.data ;
+             
           })  
   },
   
-
-  computed: {
-
-    // pasar el varlo de la busqueda a minuscula
-    busquedaMin(){
-      return this.busqueda.toLowerCase()
-      
-    },
-
-    // aplicar un filtro con el valor de la busqueda ya en minuscula
-    buscarProductos() {
-      return this.productos.filter((producto)=> {
-        return producto.nom_prdcto.match(this.busquedaMin);
-      })
-    }
+  computed:{
+      items() {
+      return this.productos.filter(item => {
+        return item.nom_prdcto.toLowerCase().includes(this.busqueda.toLowerCase());
+      });
+    }, 
   },
+  
+ 
 };
 </script>
 

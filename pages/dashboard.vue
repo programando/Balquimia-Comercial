@@ -15,7 +15,7 @@
           <CardLeftImage   
                 text    = "Registro de pedidos"
                 urlImg  = "/images/dashboard/web-search.svg"
-                urlLink = "/" >
+                urlLink = "/pedidos/registro" >
           </CardLeftImage>
 
           <CardLeftImage   
