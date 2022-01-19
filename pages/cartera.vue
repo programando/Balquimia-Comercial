@@ -1,5 +1,5 @@
 <template>
-  <div class="font-latos">
+  <div class="font-open">
     <div class="min-h-screen px-4 pt-24 bg-gray-100 ">
       <div class="pb-4 mx-2 bg-white border-2 rounded-lg">
         <h2

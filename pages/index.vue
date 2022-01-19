@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-center bg-no-repeat bg-cover font-latos"
+    class="bg-center bg-no-repeat bg-cover font-open"
     style="background-image: url('/images/home/investigacion.webp')"
   >
     <div

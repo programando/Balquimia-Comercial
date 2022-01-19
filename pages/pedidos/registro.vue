@@ -1,5 +1,5 @@
 <template>
-  <div class="font-latos">
+  <div class="font-open">
     <div class="min-h-screen px-4 pt-24 pb-40 bg-gray-100">
       <div class="pb-10 mx-2 bg-white border-2 rounded-lg">
         <h2
@@ -72,7 +72,7 @@
 
         <!-- Navegacion -->
         <div class="mt-4 text-sm">
-          <NavTabsOptions :IdTercero="pedidoH.id_terc"></NavTabsOptions>
+          <NavTabsOptions :IdTercero="pedidoH.id_terc" @AgregarProductoPedido="AgregarProductoPedido"></NavTabsOptions>
         </div>      
       </div>
     </div>
@@ -126,7 +126,10 @@ export default {
           this.pedidoH.id_terc           = tercero.id_terc;
           this.pedidoH.id_terc_vend_ppal = tercero.id_terc_vend_ppal;
           this.pedidoH.nom_vendedor      = tercero.nom_vendedor;
-
+        },
+        AgregarProductoPedido (Producto ) {
+           console.log ( Producto);
+           alert("En el pedido");
         }
   },  
 

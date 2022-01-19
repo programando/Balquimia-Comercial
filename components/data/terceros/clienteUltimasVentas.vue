@@ -1,5 +1,5 @@
 <template>
-    <table class="w-full text-left">
+    <table class="w-full text-left font-open">
       <thead class="flex w-full text-sm text-white border margen">
         <tr class="flex w-full">
           <th class="w-2/6 headerStyle">   Fecha         </th>
@@ -34,7 +34,12 @@
           <td class="w-2/6 text-right rowData">       {{ Producto.vr_unit_real | NumeroEntero}}               </td>
  
           <td    class="w-1/6 text-center rowData"> 
-            <ButtonIcon :isdisabled="!Producto.en_lista_precios" urlIcon="/images/dashboard/carrito-compras.svg"></ButtonIcon>
+          <!-- :isdisabled="!Producto.en_lista_precios"  -->
+                <div class="px-2 py-1 rounded-lg cursor-pointer "  >
+                    <img class="h-5 " @click="AgregarProductoPedido( Producto )"
+                            src="/images/dashboard/carrito-compras.svg" alt="" />
+                </div>
+
           </td>
         </tr>
       </tbody>
@@ -87,7 +92,9 @@ export default {
           .then ( response=> {
               this.ProductosComprados = response.data;
           });
-          
+      },
+      AgregarProductoPedido ( Producto ) {
+         this.$emit('AgregarProductoPedido', Producto);
       }
   }
 };
@@ -104,7 +111,7 @@ export default {
 }
 
 .headerStyle {
-  @apply flex justify-center px-2 py-1 border-t border-b border-l border-gray-700 bg-primary;
+  @apply flex justify-center px-2 py-1 border-t border-b border-l border-gray-700 bg-primary ;
 }
 
  

@@ -152,7 +152,7 @@ export default {
 
   methods: {
     clientesActivosPorVendedor() {
-      this.form.idTercVendedor = this.$store.state.User.IdTercLogueado;
+      this.form.idTercVendedor = this.$auth.user.id_terc;
       Terceros.clientesActivosPorVendedor(this.form)
       .then(response => {
         this.tercerosEncontrados = response.data;

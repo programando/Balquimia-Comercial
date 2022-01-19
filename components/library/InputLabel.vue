@@ -31,7 +31,7 @@ export default {
     },
     isUpperCase: {
           type:Boolean,
-          default() { return '';}
+          default() { return false;}
     },
     id: { type: String,
           default() { return `text-inputLab-${this._uid}`; }

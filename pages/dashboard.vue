@@ -1,5 +1,5 @@
 <template>
-  <div class="font-latos">
+  <div class="font-open">
     <div class="min-h-screen px-4 pb-40 bg-gray-100 pt-28">
       <div class="mx-2">
         <p class="mx-10 text-lg font-bold text-center lg:text-xl">Departamento comercial</p>
