@@ -128,7 +128,7 @@ export default {
           this.pedidoH.nom_vendedor      = tercero.nom_vendedor;
         },
         AgregarProductoPedido (Producto ) {
-           console.log ( Producto);
+           //console.log ( Producto);
            alert("En el pedido");
         }
   },  

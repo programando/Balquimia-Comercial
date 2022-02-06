@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import ButtonIcon from '@/components/library/buttonIcon'
+import ButtonIcon           from '@/components/library/buttonIcon'
 import ModalBuscarProductos from "@/components/data/productos/productosModal"
 export default {
   name: 'ClientePedidosGenerados',

@@ -46,7 +46,7 @@
           <div class="w-4/6 mt-10 bg-white rounded-lg">
             <div class="flex items-center justify-between px-4 bg-primary">
               <h2 class="py-2 text-lg font-semibold text-white ">
-                <strong><slot name="ModalTitle">Búsqueda</slot></strong>
+                 <slot name="ModalTitle">Búsqueda</slot> 
               </h2>
               <div @click="modal = false" class="cursor-pointer ">
                 <img
